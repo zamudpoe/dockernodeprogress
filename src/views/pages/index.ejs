@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Voting App</title>
+  </head>
+  <style type="text/css">
+    body{
+      background-color :  tomato;
+      color            :  whitesmoke;
+
+    }
+  </style>
+  <body>
+  <p>Vote Now!</p>
+  <form action="/vote" method="post" >
+    <div>
+      <label for="sandwiches-button">Sandwiches</label>
+      <input name="yourVote" id="sandwiches-button" type="radio" value="sandwiches" />
+    </div>
+    <div>
+      <label for="tacos-button">Tacos</label>
+      <input name="yourVote" id="tacos-button" type="radio" value="tacos" />
+    </div>
+    <div>
+      <label for="tacos-button">Otros</label>
+      <input name="yourVote" id="otros-button" type="radio" value="otros" checked />
+    </div>
+    <input type="submit" name="submit" id="submit" value="Vote!" />
+  </form>
+  <ul>
+    <li>Sandwiches: <%= votes.sandwiches %></li>
+    <li>Tacos: <%= votes.tacos %></li>
+    <li>Otros: <%= votes.otros %></li>
+  </ul>  
+  </body>
+</html>
